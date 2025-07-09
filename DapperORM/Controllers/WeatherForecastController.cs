@@ -19,6 +19,12 @@ namespace DapperORM.Controllers
             var data =  user.Update(id, name);
             return Ok(data);
         }
+        [HttpGet("GetMultiple")]
+        public async Task<IActionResult> getAllWithOne(int id )
+        {
+            var data =await  user.GetMultipleData(id);
+            return Ok(data);
+        }
 
 
     }
